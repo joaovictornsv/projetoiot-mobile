@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome5 } from '@expo/vector-icons'
 
-import FavoritesScreen from './Favorites';
+import RecentAccessScreen from './RecentAccess';
 import CreateScreen from "./Create";
 
 const Tab = createBottomTabNavigator();
@@ -17,7 +17,7 @@ export default function Routes() {
           paddingBottom: 5,
           paddingTop: 5,
         },
-        tabBarActiveTintColor: '#D27842',
+        tabBarActiveTintColor: '#7286D3',
         tabBarInactiveTintColor: '#FFFFFF',
         tabBarShowLabel: false,
       }}
@@ -26,17 +26,17 @@ export default function Routes() {
         options={{
           headerShown: false,
           tabBarIcon: ({ size, color }) => (
-            <FontAwesome5 name="home" color={color} size={size} />
+            <FontAwesome5 name="list" color={color} size={size} />
           )
         }}
         name="History"
-        component={FavoritesScreen}
+        component={RecentAccessScreen}
       />
       <Tab.Screen
         options={{
           headerShown: false,
           tabBarIcon: ({ size, color }) => (
-            <FontAwesome5 name="home" color={color} size={size} />
+            <FontAwesome5 name="user" color={color} size={size} />
           )
         }}
         name="Create"
